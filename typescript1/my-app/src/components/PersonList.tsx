@@ -5,13 +5,13 @@ type PersonListProps = {
   }[];
 };
 
-export const PersonList = (props: PersonListProps) => {
+export const PersonList = ({ names }: PersonListProps) => {
   return (
     <div>
-      {props.names.map((name) => {
+      {names.map(({ first, last }) => {
         return (
-          <h2 key={name.first}>
-            {name.first} {name.last}
+          <h2 key={first}>
+            {first} {last}
           </h2>
         );
       })}
