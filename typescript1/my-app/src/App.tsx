@@ -1,5 +1,6 @@
 import './App.css';
 import { Button } from './components/Button';
+import { Container } from './components/Container';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
@@ -31,22 +32,25 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="Henry" messageCount={5} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
-      <Status status="loading" />
-      <Heading>Placeholder</Heading>
-      <Oscar>
-        <Heading>Oscar goes to Brendan Fraser!</Heading>
-      </Oscar>
-      <Greet name="Henry" isLoggedIn={false} />
-      <Button
-        handleClick={(event, id) => console.log("I'm Clicked!", event, id)}
-      />
-      <Input
-        placeholder="placeholder"
-        handleChange={(event) => console.log(event.target.value)}
-      />
+      <Container
+        styles={{ border: '1px solid black', padding: '1rem', margin: '1rem' }}>
+        <Greet name="Henry" messageCount={5} isLoggedIn={false} />
+        <Person name={personName} />
+        <PersonList names={nameList} />
+        <Status status="loading" />
+        <Heading>Placeholder</Heading>
+        <Oscar>
+          <Heading>Oscar goes to Brendan Fraser!</Heading>
+        </Oscar>
+        <Greet name="Henry" isLoggedIn={false} />
+        <Button
+          handleClick={(event, id) => console.log("I'm Clicked!", event, id)}
+        />
+        <Input
+          placeholder="placeholder"
+          handleChange={(event) => console.log(event.target.value)}
+        />
+      </Container>
     </div>
   );
 }
