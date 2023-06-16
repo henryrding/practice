@@ -11,6 +11,8 @@ import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { DomRef } from './components/ref/DomRef';
+import { MutableRef } from './components/ref/MutableRef';
 import { Status } from './components/Status';
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
