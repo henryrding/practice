@@ -1,5 +1,6 @@
 import './App.css';
 import { Button } from './components/Button';
+import { Counter } from './components/class/Counter';
 import { Container } from './components/Container';
 import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
@@ -65,6 +66,7 @@ function App() {
       </UserContextProvider>
       <DomRef />
       <MutableRef />
+      <Counter message={'the count value is'} />
     </div>
   );
 }
