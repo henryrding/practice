@@ -8,6 +8,7 @@ import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { User } from './components/context/User';
 import { UserContextProvider } from './components/context/UserContext';
+import { List } from './components/generics/List';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
@@ -70,6 +71,31 @@ function App() {
       <MutableRef />
       <Counter message={'the count value is'} />
       <Private isLoggedIn={true} component={Profile} />
+      {/* <List
+        items={['Henry', 'Kevin', 'Jacob']}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List
+        items={[
+          {
+            first: 'Naruto',
+            last: 'Uzumaki',
+            id: 1,
+          },
+          {
+            first: 'Ichigo',
+            last: 'Kurosaki',
+            id: 2,
+          },
+          {
+            first: 'Anya',
+            last: 'Forger',
+            id: 3,
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
