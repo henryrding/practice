@@ -19,6 +19,7 @@ import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Status } from './components/Status';
+import { Toast } from './components/templateliterals/Toast';
 
 function App() {
   const personName = {
@@ -98,6 +99,7 @@ function App() {
         onClick={(item) => console.log(item)}
       />
       <RandomNumber value={10} isPositive />
+      <Toast position="center" />
     </div>
   );
 }
