@@ -17,6 +17,7 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
+import { RandomNumber } from './components/restriction/RandomNumber';
 import { Status } from './components/Status';
 
 function App() {
@@ -96,6 +97,7 @@ function App() {
         ]}
         onClick={(item) => console.log(item)}
       />
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
