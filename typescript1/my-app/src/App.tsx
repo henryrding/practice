@@ -11,7 +11,7 @@ import { UserContextProvider } from './components/context/UserContext';
 import { List } from './components/generics/List';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
-import { CustomButton } from './components/html/button';
+import { CustomButton } from './components/html/Button';
 import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
