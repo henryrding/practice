@@ -16,6 +16,7 @@ import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { Text } from './components/polymorphic/Text';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
 import { RandomNumber } from './components/restriction/RandomNumber';
@@ -104,6 +105,15 @@ function App() {
       <CustomButton variant="primary" onClick={() => console.log('clicked')}>
         Primary Button
       </CustomButton>
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="h2" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
