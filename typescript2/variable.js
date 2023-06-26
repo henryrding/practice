@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 const greetings = 'Hello World';
