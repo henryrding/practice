@@ -10,6 +10,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
     "standard",
     "prettier"
@@ -37,8 +38,8 @@
       }
     },
     {
-      "files": ["**/*.html"],
-      "plugins": ["eslint-plugin-html"]
+      "files": ["**/*.html", "*.ts", "*.tsx"],
+      "plugins": ["eslint-plugin-html", "@typescript-eslint"]
     }
   ]
 }
