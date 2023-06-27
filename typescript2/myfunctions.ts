@@ -56,7 +56,7 @@ function consoleError(errorMessage: string): void {
 
 consoleError('oopsies');
 
-function handleError(errorMessage: string): void {
+function handleError(errorMessage: string): never {
   throw new Error(errorMessage);
 }
 
