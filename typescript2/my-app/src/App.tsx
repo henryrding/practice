@@ -14,7 +14,9 @@ function App() {
   //   }
 
   class User {
-    private _courseCount = 1;
+    // access modifiers (private, public, protected)
+
+    protected _courseCount = 1;
 
     private readonly city: string = 'Riveride';
     constructor(
@@ -43,6 +45,15 @@ function App() {
 
   const henry = new User('henry@email.com', 'henry');
 
+  class SubUser extends User {
+    isFamily: boolean = true;
+    changeCourseCount() {
+      this._courseCount = 4;
+    }
+  }
+
+  const james = new SubUser('james@email.com', 'james');
+
   return (
     <div className="App">
       <header className="App-header">
@@ -52,6 +63,7 @@ function App() {
         </p>
         <div>{henry.email}</div>
         <div>{henry.name}</div>
+        <div>{james.email}</div>
         {/* <div>{(henry.city)}</div> */}
         <a
           className="App-link"
