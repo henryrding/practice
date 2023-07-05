@@ -29,4 +29,17 @@ interface Bottle {
 
 identityFour<Bottle>({ brand: 'hydroflask', type: 3 });
 
+function getSearchProducts<T>(products: T[]): T {
+  // some database operations
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+// comma is for denoting generic, not jsx syntax
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  // some database operations
+  const myIndex = 4;
+  return products[myIndex];
+};
+
 export {};
