@@ -42,4 +42,35 @@ const getMoreSearchProducts = <T>(products: T[]): T => {
   return products[myIndex];
 };
 
+interface Database {
+  connection: string;
+  username: string;
+  password: string;
+}
+
+function anotherFunction<T, U extends Database>(val1: T, val2: U): object {
+  return { val1, val2 };
+}
+
+anotherFunction(3, { connection: 'a', username: 'b', password: 'c' });
+
+interface Quiz {
+  name: string;
+  type: string;
+}
+
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}
+
 export {};
