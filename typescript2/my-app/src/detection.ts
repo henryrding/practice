@@ -46,4 +46,33 @@ function isAdminAccount(account: User | Admin) {
   }
 }
 
+// instance of narrowing
+function logValue(val: Date | string) {
+  if (val instanceof Date) {
+    console.log(val.toUTCString());
+  } else {
+    console.log(val.toUpperCase());
+  }
+}
+
+type Fish = {
+  swim: () => void;
+};
+
+type Bird = {
+  fly: () => void;
+};
+
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+
+function getFood(pet: Fish | Bird) {
+  if (isFish(pet)) {
+    return 'Fish food';
+  } else {
+    return 'Bird Food';
+  }
+}
+
 export {};
