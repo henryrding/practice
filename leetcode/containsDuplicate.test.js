@@ -1,6 +1,6 @@
 import { containsDuplicate } from './containsDuplicate';
 
-describe('containsDuplicate(nums, target)', () => {
+describe('containsDuplicate(nums)', () => {
   it('returns true if any value appears at least twice in the array', () => {
     const nums = [1, 2, 3, 1];
     const result = containsDuplicate(nums);
