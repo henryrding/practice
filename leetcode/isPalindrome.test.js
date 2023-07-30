@@ -1,6 +1,6 @@
 import { isPalindrome } from './isPalindrome';
 
-describe('isPalindrome(s)', () => {
+describe('isPalindrome(x)', () => {
   it('returns true if integer is a palindrome', () => {
     const x = 121;
     const result = isPalindrome(x);
