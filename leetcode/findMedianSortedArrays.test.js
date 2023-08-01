@@ -14,4 +14,18 @@ describe('findMedianSortedArrays(nums1, nums2)', () => {
     const result = findMedianSortedArrays(nums1, nums2);
     expect(result).toEqual(2.5);
   });
+
+  it('handles empty arrays', () => {
+    const nums1 = [];
+    const nums2 = [3, 4];
+    const result = findMedianSortedArrays(nums1, nums2);
+    expect(result).toEqual(3.5);
+  });
+
+  it('handles negative numbers', () => {
+    const nums1 = [-1, -2];
+    const nums2 = [3, 4];
+    const result = findMedianSortedArrays(nums1, nums2);
+    expect(result).toEqual(1);
+  });
 });
