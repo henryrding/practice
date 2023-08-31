@@ -14,6 +14,7 @@ function preloadImage(src: string) {
   });
 }
 
+//  look into isCancelled variable usage.
 export default function useImagePreloader(images: ImageProps[]) {
   const [imagesPreloaded, setImagesPreloaded] = useState<boolean>(false);
 
@@ -21,8 +22,6 @@ export default function useImagePreloader(images: ImageProps[]) {
     let isCancelled = false;
 
     async function effect() {
-      console.log('PRELOAD');
-
       if (isCancelled) {
         return;
       }
@@ -30,7 +29,6 @@ export default function useImagePreloader(images: ImageProps[]) {
       const imagesPromiseList: Promise<any>[] = [];
       for (const image of images) {
         imagesPromiseList.push(preloadImage(image.imageUrl));
-        console.log(imagesPromiseList);
       }
 
       await Promise.all(imagesPromiseList);

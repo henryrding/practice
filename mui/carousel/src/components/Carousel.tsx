@@ -15,6 +15,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images, scrollIcon }) => {
         setSlideVisible(false);
       }, 5000);
 
+      // improve readability
       const interval = setInterval(() => {
         setTimeout(() => {
           setSlideVisible(false);
@@ -34,12 +35,14 @@ export const Carousel: React.FC<CarouselProps> = ({ images, scrollIcon }) => {
   if (!imagesPreloaded) {
     return (
       <Paper
-        sx={{
+        // find difference between sx prop and style prop
+        style={{
           height: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}>
+        {/* pass text as prop */}
         <Typography variant="h1">Welcome to DesignPad</Typography>
       </Paper>
     );
